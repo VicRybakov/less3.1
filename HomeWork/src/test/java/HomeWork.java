@@ -4,7 +4,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class homeWork
+public class HomeWork
 {
 
     @Test
@@ -14,6 +14,6 @@ public class homeWork
         $("[data-search-type='Wikis']").click();
         $("#wiki_search_results").shouldHave(text("SoftAssertions"));
         $("#wiki_search_results").$(byText("SoftAssertions")).click();
-        $("[start='3']").shouldHave(text("Using JUnit5 extend test class"));
+        $("#repo-content-turbo-frame").shouldHave(text("Using JUnit5 extend test class"));
     }
 }
